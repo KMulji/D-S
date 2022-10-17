@@ -1,19 +1,21 @@
 
 #include <iostream>
 #include "./ArrayADT.hpp"
-
+#include <unistd.h>
 int main()
 {
-    ArrayADT x =  ArrayADT();
-    for(int i=0;i<10;i++)
-    {
-        x.Append(i+1);
-    }
-    for(int i=0;i<10;i++)
-    {
-        std::cout<<x[i]<<std::endl;
-    }
-    std::cout<<x[10]<<std::endl;
+    ArrayADT x = ArrayADT();
+    x.Append(5);
+    x.Append(7);
+    x.Append(7);
+    x.Append(8);
+    x.Append(8);
+    x.Append(10);
+    x.Display();
+    std::cout<<x.BinLeftMost(8)<<std::endl;
+
+    
+    
     
     return 0;
 }
